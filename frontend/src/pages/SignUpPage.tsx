@@ -1,11 +1,11 @@
-import Header from "../components/Header";
-import SignUp from "../components/SignUp";
+import Header from "../components/Auth/Header";
+import SignUp from "../components/Auth/SignUp";
 
 export default function SignUpPage(){
     return(
         <>
             <Header
-              heading="SignUp to create an account"
+              heading="Create your account"
               paragraph="Already have an account? "
               linkName="Login"
               linkUrl="/"
