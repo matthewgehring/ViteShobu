@@ -3,29 +3,5 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  background-color: rgb(101, 138, 170);
-}
-
-.Cards {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-auto-rows: auto;
-  grid-gap: 1rem;
-}
-
-.Card {
-  background-color: rgb(65, 65, 65);
-  box-shadow: 0 4px 8px 0 rgba(18, 0, 53, 0.2);
-  transition: 0.3s;
-  border-radius: 5px; /* 5px rounded corners */
-  height: 100px;
-  padding: 10px;
-  margin: 10px;
-  text-align: center;
-  vertical-align: middle;
-  line-height: 100px;  
-}
-
-.spy {
-  background-color: rgb(227, 0, 0);
+  background-color: rgb(255, 255, 255);
 }

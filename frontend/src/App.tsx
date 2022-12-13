@@ -1,40 +1,36 @@
 import { useState, useEffect } from 'react'
 import './App.css'
-import Card from './card';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from 'react-router-dom'
+import SignUpPage from './pages/SignUpPage'
+import LoginPage from './pages/LoginPage'
 
 function App() {
-  const [spyCss, setSpyCss] = useState(false);
-  const [words, setWords] = useState<string[]>([]);
 
   useEffect(() => {
-      getWord()
+      getAuth()
   }, [])
 
-  async function getWord () {
-    const res = await fetch('http://localhost:8081/words');
+  async function getAuth () {
+    const res = await fetch('http://localhost:8081/oauth');
     const data = await res.json();
     console.log(data.data);
-    setWords(data.data)
-  }
-
-  const spy = () => {
-    setSpyCss(!spyCss);
   }
 
   return (
-    <div className='GameArea'>
-      <div className="Cards">
-          {
-            [...words].map(element => {
-              return <Card css = {spyCss} word ={element}/>
-            })
-          }
-      </div>
-      <div className='SpyButton'>
-        <button onClick={spy}>Spy</button>
-      </div>
-        
+    <div className="min-h-full h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+    <div className="max-w-md w-full space-y-8">
+     <BrowserRouter>
+        <Routes>
+            <Route path="/" element={<LoginPage/>} />
+            <Route path="/signup" element={<SignUpPage/>} />
+        </Routes>
+      </BrowserRouter>
     </div>
+  </div>
   )
 }
 

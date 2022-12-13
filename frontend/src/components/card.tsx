@@ -1,5 +1,7 @@
+//component from different game used to show type setting
+
 import { useState, useEffect } from 'react'
-import './App.css'
+import '../App.css'
 
 type CardProps = {
     word: string,
