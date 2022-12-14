@@ -1,10 +1,9 @@
 import * as React from 'react';
 import testPFP from '../../assets/testPFP.png'
 import ChatMessage from './ChatMessage'
-enum PlayerType {
-    self = 'self',
-    opp = 'opp',
-}
+import { PlayerType } from '../../constants/enums';
+
+
 const Chat = () => {
     return (
         <div className="flex flex-col flex-grow w-full max-w-lg bg-white shadow-xl rounded-lg overflow-hidden">
