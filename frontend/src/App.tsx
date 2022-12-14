@@ -9,6 +9,7 @@ import SignUpPage from './pages/SignUpPage';
 import LoginPage from './pages/LoginPage';
 import LobbyPage from './pages/LobbyPage';
 import NavBar from './components/inprogress/navbar';
+import GamePage from './pages/GamePage';
 
 function App() {
 
@@ -23,13 +24,15 @@ function App() {
   }
 
   return (
+    //not sure if these divs are supposed to be here tbh
     <div className="min-h-full h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-    <div className="max-w-md w-full space-y-8">
+    <div className="max-w-none w-full space-y-8">
      <BrowserRouter>
         <Routes>
             <Route path="/" element={<LoginPage/>} />
             <Route path="/signup" element={<SignUpPage/>} />
             <Route path="/lobby" element={<LobbyPage/>} />
+            <Route path="/game" element={<GamePage/>} />
         </Routes>
       </BrowserRouter>
       </div>
