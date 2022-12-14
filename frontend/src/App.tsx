@@ -5,8 +5,10 @@ import {
   Routes,
   Route,
 } from 'react-router-dom'
-import SignUpPage from './pages/SignUpPage'
-import LoginPage from './pages/LoginPage'
+import SignUpPage from './pages/SignUpPage';
+import LoginPage from './pages/LoginPage';
+import LobbyPage from './pages/LobbyPage';
+import NavBar from './components/inprogress/navbar';
 
 function App() {
 
@@ -27,10 +29,12 @@ function App() {
         <Routes>
             <Route path="/" element={<LoginPage/>} />
             <Route path="/signup" element={<SignUpPage/>} />
+            <Route path="/lobby" element={<LobbyPage/>} />
         </Routes>
       </BrowserRouter>
-    </div>
+      </div>
   </div>
+
   )
 }
 
