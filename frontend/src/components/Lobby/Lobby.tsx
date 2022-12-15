@@ -1,13 +1,8 @@
 import React, { useState, FormEventHandler, useEffect} from "react";
 import CreateTable from "./CreateTable";
 import Tables from "./Tables";
+import { table } from '../../constants/types'
 
-export type table = {
-    player1: string,
-    player2: string,
-    activestatus: boolean,
-    tableID: string
-}
 
 
 // const handleSubmit=(e: React.FormEvent<HTMLButtonElement>, userName: string)=>{
@@ -60,7 +55,7 @@ const exampletables: table[] = [{
 export default function Lobby() {
     return (
         <div>
-            <Tables {...exampletables}/>
+            <Tables tables={exampletables}/>
         </div>
     );
 }

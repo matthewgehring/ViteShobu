@@ -24,8 +24,8 @@ function App() {
 
   return (
     //not sure if these divs are supposed to be here tbh
-    <div className="min-h-full h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-    <div className="max-w-none w-full space-y-8">
+    // <div className="min-h-full h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+    // <div className="max-w-none w-full space-y-8">
      <BrowserRouter>
         <Routes>
             <Route path="/" element={<LoginPage/>} />
@@ -34,8 +34,8 @@ function App() {
             <Route path="/game" element={<GamePage/>} />
         </Routes>
       </BrowserRouter>
-      </div>
-  </div>
+  //     </div>
+  // </div>
 
   )
 }
