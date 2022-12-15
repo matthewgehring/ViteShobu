@@ -1,7 +1,8 @@
 import React, { useState, FormEventHandler, useEffect} from "react";
 import CreateTable from "./CreateTable";
 import Tables from "./Tables";
-import { table } from "../../constants/types";
+import { table } from '../../constants/types'
+
 
 
 // const handleSubmit=(e: React.FormEvent<HTMLButtonElement>, userName: string)=>{
