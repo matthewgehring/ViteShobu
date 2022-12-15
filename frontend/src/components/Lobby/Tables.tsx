@@ -1,13 +1,11 @@
 import Row from './Row';
+import { table } from '../../constants/types'
 
-export type table = {
-    player1: string,
-    player2: string,
-    activestatus: boolean,
-    tableID: string
+type TablesProps = {
+    tables: table[]
 }
 
-function Tables(tables: table[]) {
+function Tables({tables}: TablesProps) {
     return (
         <table>
             <thead>
@@ -18,8 +16,8 @@ function Tables(tables: table[]) {
                     <th>Table ID</th>
                 </tr>
             </thead>
-            <tbody>
-                {tables.map((table) => ( <Row {...table} /> ))}
+            <tbody> 
+                {tables.map((table) => (<Row {...table} />))}
             </tbody>
         </table>
     );
