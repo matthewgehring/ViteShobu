@@ -1,32 +1,16 @@
-import React from 'react';
-import { useState } from 'react';
-
-const [tableID, setTableID] = useState([]);
+import { table } from './Lobby';
 
 //TODO create JOIN/WATCH BUTTON and figure out tableID
 
-type RowProps = {
-        player1: string,
-        player2: string,
-        activestatus: boolean,
-        tableID: string
-    }
-
-
-
-function Row({
-    player1,
-    player2,
-    activestatus,
-    tableID
-}: RowProps) {
+function Row(table:table) {
     return (
         <>
             <tr>
-              <td>{player1}</td>
-              <td>{player2}</td>
-              {activestatus ? (<td>join button</td>) : (<td>watch button</td>)}
-              </tr>
+                <td>{table.player1}</td>
+                <td>{table.player2}</td>
+                <td>{table.activestatus ? 'Watch' : 'Join'}</td>
+                <td>{table.tableID}</td>
+            </tr>
         </>
     )
 }

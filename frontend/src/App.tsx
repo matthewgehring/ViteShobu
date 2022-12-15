@@ -8,7 +8,6 @@ import {
 import SignUpPage from './pages/SignUpPage';
 import LoginPage from './pages/LoginPage';
 import LobbyPage from './pages/LobbyPage';
-import NavBar from './components/inprogress/navbar';
 import GamePage from './pages/GamePage';
 
 function App() {
