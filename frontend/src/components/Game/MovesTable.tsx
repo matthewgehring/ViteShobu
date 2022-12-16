@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const InGameTable = () => {
+const MovesTable = () => {
     return (
         <>
         <div className="flex flex-col flex-grow w-full max-w-lg bg-gray-100 shadow-xl rounded-lg overflow-hidden">
@@ -30,4 +30,4 @@ const InGameTable = () => {
     )
 }
 
-export default InGameTable;
+export default MovesTable;

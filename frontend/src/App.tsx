@@ -9,6 +9,7 @@ import SignUpPage from './pages/SignUpPage';
 import LoginPage from './pages/LoginPage';
 import LobbyPage from './pages/LobbyPage';
 import GamePage from './pages/GamePage';
+import UserPage from './pages/UserPage';
 
 function App() {
 
@@ -28,10 +29,11 @@ function App() {
     // <div className="max-w-none w-full space-y-8">
      <BrowserRouter>
         <Routes>
-            <Route path="/" element={<LoginPage/>} />
-            <Route path="/signup" element={<SignUpPage/>} />
-            <Route path="/lobby" element={<LobbyPage/>} />
-            <Route path="/game" element={<GamePage/>} />
+            <Route path="/" element={<LoginPage />} />
+            <Route path="/signup" element={<SignUpPage />} />
+            <Route path="/lobby" element={<LobbyPage />} />
+            <Route path="/game" element={<GamePage />} />
+            <Route path="/user" element={<UserPage />} />
         </Routes>
       </BrowserRouter>
   //     </div>

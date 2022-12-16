@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import Board from "../components/Game/Board"
 import Chat from '../components/Game/Chat'
 import UserTag from '../components/Game/UserTag'
-import InGameTable from '../components/Game/InGameTable'
+import MovesTable from '../components/Game/MovesTable'
 
 
 
@@ -17,7 +17,7 @@ function GamePage() {
             <UserTag />
         </div>
         <div className='grid grid-rows-2 gap-5'>
-            <InGameTable />
+            <MovesTable />
             <Chat />
         </div>
     </div>
