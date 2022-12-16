@@ -13,27 +13,15 @@ export default function NavBar({
     user
 }: NavProps) {
     return (
-       
-        <nav className="bg-gray-800 p-2 mt-0 basis-full w-full top-0">
-            <div className="container mx-auto flex flex-wrap items-center">
-            <span className="font-semibold text-xl tracking-tight">Shobu</span>
-            </div>
-            <div className="block lg:hidden">
-            <button className="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
-                <svg className="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
-            </button>
-            </div>
-            <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-            <div className="text-sm lg:flex-grow">
-                <NavButton linkName='Home' linkUrl='/lobby'></NavButton>
-                <NavButton linkName='About' linkUrl='/lobby'></NavButton>
-                <NavButton linkName='learn' linkUrl='/lobby'></NavButton>
-            </div>
-            <div>
-                <a href="#" className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Download</a>
-            </div>
-            </div>
-        </nav>
+        <nav className="fixed top-0 left-0 right-0 justify-between z-50 grid grid-flow-col grow-0 grid-row-3 items-center px-4 py-3 bg-zinc-500 text-zinc-100 shadow-lg">
+        <button className="w-32 font-bold text-zinc-100 bg-rose-400 rounded-full hover:bg-rose-600">
+          Lobby
+        </button>
+        <div className="font-bold text-2xl ">Matt</div>
+        <button className="w-32 font-bold text-zinc-100 bg-rose-400 rounded-full hover:bg-rose-600" >
+          Profile
+        </button>
+      </nav>
             // <NavButton linkName='About' linkUrl='/about'></NavButton>
             // <div>User: {user}</div>
         

@@ -8,13 +8,8 @@ type CreateProps = {
 
 export default function CreateTable(props: CreateProps) {
     return (
-        <table>
-            <thead>
-                Create New Table
-            </thead>
-            <tr>
-                <button type='submit' onSubmit={e=>props.handleSubmit(e,props.userName)}>Create New Table</button>
-            </tr>
-        </table>
+        <div className="" >
+            <button className="font-bold text-white bg-rose-400 rounded-full hover:bg-rose-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500" type='submit' onSubmit={e=>props.handleSubmit(e,props.userName)}>Create New Table</button>
+        </div>
     );
 }

@@ -6,8 +6,7 @@ type TablesProps = {
 function Tables({tables}:TablesProps) {
     console.log(tables)
     return (
-        <div>
-            <h1 className='text-sm bg-gray-400'>Hello</h1>
+        <div className='row-span-4'>
         <table>
             <thead>
                 <tr >

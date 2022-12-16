@@ -10,7 +10,7 @@
 
   color-scheme: light dark;
   color: rgba(107, 0, 139, 0.87);
-  background-color: #6c0ec4;
+  background-color: #52525b;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -19,7 +19,7 @@
   -webkit-text-size-adjust: 100%;
 }
 body{
-  background-color: #041d4b;
+  background-color: #52525b;
 }
 
 a {
@@ -30,14 +30,14 @@ a {
 a:hover {
   color: #535bf2;
 }
-
+/* 
 body {
   margin: 0;
   display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-}
+} */
 
 h1 {
   font-size: 3.2em;
