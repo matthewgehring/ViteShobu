@@ -9,7 +9,7 @@ export default function Record({
 }: RecordProps){
     return(
         <div className="max-w-sm w-full lg:max-w-full lg:flex">
-        <div className="border border-gray-400 lg:border-t lg:border-gray-400  rounded p-8 mb-4 mt-4 flex flex-col justify-between leading-normal w-64 bg-gray-300">
+        <div className="border border-gray-400 max-h-24 lg:border-t lg:border-gray-400  rounded p-8 mb-4 mt-4 flex flex-col justify-between leading-normal w-64 bg-gray-300">
            
             <div className="text-sm grid grid-cols-3">
                 <p className="text-gray-900">Wins: {record[0]}</p>
