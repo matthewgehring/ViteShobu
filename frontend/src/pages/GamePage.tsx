@@ -14,7 +14,7 @@ function GamePage() {
     <div className='grid grid-cols-2 gap-8 bg-gray-200'>
         <div>
             <UserTag />
-            <moveContext.Provider value={}>
+            <moveContext.Provider value={move}>
               <Board />
             </moveContext.Provider>
             <UserTag />
