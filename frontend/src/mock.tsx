@@ -12,7 +12,7 @@ const usersStub: userInfo = {
 const gameStub = {
     "board": boardInit
 }
-const stubs: {[key: string]: Object} = {
+const apiEndPoints: {[key: string]: Object} = {
     "users" : usersStub,
     "games" : gameStub
 }
@@ -20,7 +20,7 @@ const stubs: {[key: string]: Object} = {
 
 async function fetchMock (req:httpRequest) : Promise<httpResponse>  {
     return new Promise<httpResponse>((resolve, reject) => {
-        const res = {body: stubs[req.url] }
+        const res = {body: apiEndPoints[req.url] }
         resolve(res)
     })
 }
