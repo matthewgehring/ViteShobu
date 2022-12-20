@@ -1,5 +1,6 @@
-import * as React from 'react';
+import { useState } from 'react';
 import Region from './Region';
+import {boardInit} from '../../constants/boardInit'
 
 const Board = () => {
   return (

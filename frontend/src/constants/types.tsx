@@ -13,7 +13,7 @@ type pastGame = {
 
 type userInfo = {
     userName: string,
-    userElo: string,
+    elo: string,
     joinDate: string,
 }
 

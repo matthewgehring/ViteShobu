@@ -13,15 +13,15 @@ import UserPage from './pages/UserPage';
 
 function App() {
 
-  useEffect(() => {
-      getAuth()
-  }, [])
+  // useEffect(() => {
+  //     getAuth()
+  // }, [])
 
-  async function getAuth () {
-    const res = await fetch('http://localhost:8081/oauth');
-    const data = await res.json();
-    console.log(data.data);
-  }
+  // async function getAuth () {
+  //   const res = await fetch('http://localhost:8081/oauth');
+  //   const data = await res.json();
+  //   console.log(data.data);
+  // }
 
   return (
     //not sure if these divs are supposed to be here tbh
