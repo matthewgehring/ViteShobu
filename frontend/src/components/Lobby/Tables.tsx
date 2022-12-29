@@ -1,8 +1,6 @@
 import Row from './Row';
-import { table } from '../../constants/types'
-type TablesProps = {
-    tables: table[]
-}
+import { TablesProps } from '../../constants/types'
+
 function Tables({tables}:TablesProps) {
     console.log(tables)
     return (

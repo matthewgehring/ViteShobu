@@ -1,8 +1,13 @@
+
 type table = {
     player1: string,
     player2: string,
     activestatus: boolean,
     tableID: string
+}
+
+type TablesProps = {
+    tables: table[]
 }
 
 type pastGame = {
@@ -17,4 +22,5 @@ type userInfo = {
     joinDate: string,
 }
 
-export type { table, pastGame, userInfo };
+
+export type { table, pastGame, userInfo, TablesProps };
