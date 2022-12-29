@@ -33,7 +33,7 @@ let lobbyGetStub: table[] = [{
 const gameStub = {
     "board": boardInit
 }
-const stubs: {[key: string]: Object} = {
+const apiEndPoints: {[key: string]: Object} = {
     "users" : usersStub,
     "games" : gameStub,
     "lobby" : lobbyGetStub,
@@ -61,7 +61,7 @@ async function fetchLobbyMockGet (req:httpRequest) : Promise<httpResponse>  {
 
 async function fetchMock (req:httpRequest) : Promise<httpResponse>  {
     return new Promise<httpResponse>((resolve, reject) => {
-        const res = {body: stubs[req.url] }
+        const res = {body: apiEndPoints[req.url] }
         resolve(res)
     })
 }
