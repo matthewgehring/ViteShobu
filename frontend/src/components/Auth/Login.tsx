@@ -3,12 +3,15 @@ import { loginFields } from "../../constants/formFields";
 import Input from "./Input";
 import FormExtra from './FormExtra';
 import FormAction from './FormAction';
+import { httpMethods } from '../../constants/enums';
+import { fetchTokenMock } from '../../mock';
+import { Cookie, setCookie } from '../../constants/interfaces';
 
 const fields=loginFields;
 let fieldsState: any = {};
 fields.forEach(field=>fieldsState[field.id]='');
 
-export default function Login(){
+export default function Login({cookies, setCookie}: {cookies: Cookie, setCookie: setCookie}){
     const [loginState,setLoginState]=useState(fieldsState);
 
     const handleChange=(e : React.ChangeEvent<HTMLInputElement>)=>{
@@ -16,18 +19,29 @@ export default function Login(){
         setLoginState({...loginState,[e.target.id]:e.target.value})
     }
 
-    const handleSubmit=(e: React.SyntheticEvent<HTMLFormElement>)=>{
+    const handleSubmit= async (e: React.SyntheticEvent<HTMLFormElement>)=>{
         e.preventDefault();
-        authenticateUser();
+        const token: string = await authenticateUser(); 
+        setCookie('jwt', token, { path: '/'});
+        const mycookie = cookies['jwt']
+        console.log(mycookie);
     }
 
     //Handle Login API Integration here
-    const authenticateUser = () =>{
-
+    const authenticateUser = async () =>{
+        const sampleRequest = {
+            method: httpMethods.POST,
+            url: 'token',
+            params: [''],
+            body: {loginState}
+        }
+        const res = await fetchTokenMock(sampleRequest);
+        return res.body as string;
+        //TODO GENERATE TOKEN with email and password
     }
 
     return(
-        <form className="mt-8 space-y-6">
+        <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
         <div className="-space-y-px">
             {
                 fields.map(field=>
@@ -50,7 +64,7 @@ export default function Login(){
         </div>
 
         <FormExtra/>
-        <FormAction handleSubmit={handleSubmit} text="Login" action='submit'/>
+        <FormAction text="Login" action='submit'/>
 
       </form>
     )

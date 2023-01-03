@@ -29,6 +29,8 @@ let lobbyGetStub: table[] = [{
     tableID: "443"
 }]
 
+const tokenStub: string = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
+
 //need to figure out this schema
 const gameStub = {
     "board": boardInit
@@ -37,10 +39,19 @@ const apiEndPoints: {[key: string]: Object} = {
     "users" : usersStub,
     "games" : gameStub,
     "lobby" : lobbyGetStub,
+    "token" : tokenStub
 }
 
 
 // FETCH MOCKS HERE___________________________________________________________________________________________
+
+async function fetchTokenMock (req:httpRequestPOST) : Promise<httpResponse>  {
+    return new Promise<httpResponse>((resolve, reject) => {
+        const res = {body: apiEndPoints[req.url]}
+        resolve(res);
+    })
+}
+
 
 async function fetchLobbyMockPost (req:httpRequestPOST) : Promise<httpResponse>  {
     return new Promise<httpResponse>((resolve, reject) => {
@@ -54,7 +65,7 @@ async function fetchLobbyMockPost (req:httpRequestPOST) : Promise<httpResponse> 
 
 async function fetchLobbyMockGet (req:httpRequest) : Promise<httpResponse>  {
     return new Promise<httpResponse>((resolve, reject) => {
-        const res = {body: stubs[req.url] }
+        const res = {body: apiEndPoints[req.url] }
         resolve(res);
     })
 }
@@ -66,4 +77,4 @@ async function fetchMock (req:httpRequest) : Promise<httpResponse>  {
     })
 }
 
-export { fetchMock, fetchLobbyMockGet, fetchLobbyMockPost }
+export { fetchMock, fetchLobbyMockGet, fetchLobbyMockPost, fetchTokenMock }

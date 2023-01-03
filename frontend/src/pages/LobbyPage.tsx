@@ -7,7 +7,7 @@ function LobbyPage() {
 
   return (
     <div>
-        <NavBar user={"matt"}/>
+        <NavBar user={"Devon"}/>
         <Lobby/>
     </div>
   )

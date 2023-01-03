@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { signupFields } from "../../constants/formFields"
 import FormAction from "./FormAction";
 import Input from "./Input";
+import { useCookies } from 'react-cookie';
 
 const fields=signupFields;
 let fieldsState: any = {};
@@ -22,6 +23,8 @@ export default function Signup(){
   const createAccount=()=>{
 
   }
+
+
 
     return(
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
@@ -44,7 +47,7 @@ export default function Signup(){
                 
                 )
             }
-          <FormAction handleSubmit={handleSubmit} text="Signup" action='submit'/>
+          <FormAction text="Signup" action='submit'/>
         </div>
 
          

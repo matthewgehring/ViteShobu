@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react'
 import Header from "../components/Auth/Header"
 import Login from '../components/Auth/Login'
+import { Cookie, setCookie } from '../constants/interfaces';
+import { CookieSaveOptions } from '../constants/interfaces';
 
-function LoginPage() {
+function LoginPage({cookies, setCookie}: {cookies: Cookie, setCookie: setCookie}) {
   
   return (
     <>
@@ -12,7 +14,7 @@ function LoginPage() {
           linkName="Signup"
           linkUrl="/signup"
         />
-        <Login/>
+        <Login cookies={cookies} setCookie={setCookie}/>
     </>
   )
 }

@@ -17,7 +17,7 @@ export default function NavBar({
         <button className="w-32 font-bold text-zinc-100 bg-rose-400 rounded-full hover:bg-rose-600">
           Lobby
         </button>
-        <div className="font-bold text-2xl ">Matt</div>
+        <div className="font-bold text-2xl ">{user}</div>
         <button className="w-32 font-bold text-zinc-100 bg-rose-400 rounded-full hover:bg-rose-600" >
           Profile
         </button>
